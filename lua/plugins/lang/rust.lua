@@ -1,4 +1,11 @@
 return {
+  -- treesitter parsers (highlighting, mini.ai text objects); merged with LazyVim's list
+  {
+    -- not installed by default by nvim-treesitter,
+    -- so we need to install it here.
+    "nvim-treesitter/nvim-treesitter",
+    opts = { ensure_installed = { "rust", "ron" } },
+  },
   {
     "neovim/nvim-lspconfig",
     opts = {
